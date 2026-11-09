@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>ریاضی ایران</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1a5f7a">
+</head>
+<body>
+    <div id="app">
+        <!-- صفحه اصلی -->
+        <div id="home-screen" class="screen active">
+            <div class="header">
+                <h1>ریاضی ایران</h1>
+                <p class="subtitle">ماجراجویی ریاضی در سراسر ایران</p>
+            </div>
+            <div class="character">
+                <div class="avatar">🧮</div>
+                <p>سلام! من سینا هستم. بیا با هم ریاضی یاد بگیریم و سفر کنیم!</p>
+            </div>
+            <div class="grade-select">
+                <h2>پایه تحصیلی خودت رو انتخاب کن:</h2>
+                <div class="grades">
+                    <button class="grade-btn" data-grade="1">پایه اول</button>
+                    <button class="grade-btn" data-grade="2">پایه دوم</button>
+                    <button class="grade-btn" data-grade="3">پایه سوم</button>
+                    <button class="grade-btn" data-grade="4">پایه چهارم</button>
+                    <button class="grade-btn" data-grade="5">پایه پنجم</button>
+                    <button class="grade-btn" data-grade="6">پایه ششم</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- صفحه سطوح -->
+        <div id="levels-screen" class="screen">
+            <div class="top-bar">
+                <button id="back-home" class="back-btn">← بازگشت</button>
+                <h2 id="grade-title">پایه اول</h2>
+                <div class="score">امتیاز: <span id="total-score">0</span></div>
+            </div>
+            <div id="levels-container" class="levels-grid"></div>
+        </div>
+
+        <!-- صفحه بازی -->
+        <div id="game-screen" class="screen">
+            <div class="top-bar">
+                <button id="back-levels" class="back-btn">← سطوح</button>
+                <h2 id="level-title">سطح</h2>
+                <div class="lives">❤️❤️❤️</div>
+            </div>
+            <div id="game-area" class="game-area"></div>
+            <div id="feedback" class="feedback"></div>
+            <div class="controls">
+                <button id="hint-btn" class="btn secondary">راهنما</button>
+                <button id="next-btn" class="btn primary" style="display:none;">بعدی</button>
+            </div>
+        </div>
+
+        <!-- صفحه نتیجه -->
+        <div id="result-screen" class="screen">
+            <h2>عالی بود!</h2>
+            <div class="stars" id="result-stars">⭐⭐⭐</div>
+            <p id="result-text">سطح را با موفقیت گذراندی!</p>
+            <button id="continue-btn" class="btn primary">ادامه</button>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
